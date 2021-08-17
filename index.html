@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/normalize.min.css" />
+    <link rel="stylesheet" href="./styles/hamburgers.min.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+    <title>Menu nav - HTML - CSS</title>
+  </head>
+  <body>
+    <!-- <button class="hamburger hamburger--collapse" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button> -->
+    <div id="root"></div>
+
+    <script
+      data-plugins="transform-es2015-modules-umd"
+      type="text/babel"
+      src="./js/components/navbar/NavbarItem.js"
+    ></script>
+    <script
+      data-plugins="transform-es2015-modules-umd"
+      type="text/babel"
+      src="./js/components/navbar/Navbar.js"
+    ></script>
+    <script
+      data-plugins="transform-es2015-modules-umd"
+      type="text/babel"
+      src="./js/components/layout/Layout.js"
+    ></script>
+    <script
+      type="text/babel"
+      data-plugins="transform-es2015-modules-umd"
+      src="./js/index.js"
+    ></script>
+  </body>
+</html>
