@@ -1,12 +1,9 @@
 import NavbarItem from "./NavbarItem";
 
 export default function Navbar() {
+  const [active, setActive] = React.useState(false);
   return (
-    <nav
-      role="navigation"
-      aria-label="Menu de navegación"
-      className="nav"
-    >
+    <nav role="navigation" aria-label="Menu de navegación" className="nav">
       <header className="nav-header"></header>
       <div className="nav-menu">
         <NavbarItem title="Home" icon="home" />

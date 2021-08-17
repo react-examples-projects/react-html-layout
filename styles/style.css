@@ -35,6 +35,24 @@ img {
   border-radius: 5px;
 }
 
+figure {
+  margin-bottom: 1.8rem;
+}
+
+figure > img {
+  margin-bottom: 0.5rem;
+}
+
+figure figcaption {
+  opacity: 0.7;
+}
+
+figure figcaption::before {
+  content: "—";
+  display: inline-block;
+  margin-right: 0.2rem;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -123,20 +141,19 @@ img.margin {
   border-radius: 5px;
 }
 
-figure {
-  margin-bottom: 1rem;
-}
+@media screen and (max-width: 760px) {
+  .container {
+    display: block;
+  }
 
-figure > img {
-  margin-bottom: 0.5rem;
-}
-
-figure figcaption {
-  opacity: 0.7;
-}
-
-figure figcaption::before {
-  content: "—";
-  display: inline-block;
-  margin-right: 0.2rem;
+  .nav {
+    display: block;
+    position: fixed;
+    height: 100%;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 250px;
+  }
 }
