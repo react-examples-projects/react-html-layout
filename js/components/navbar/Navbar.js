@@ -33,7 +33,7 @@ export default function Navbar() {
         <NavbarItem title="Logout" icon="log-out" />
 
         <footer className="nav-menu-footer">
-          <img src="../../../img/menu_footer.svg" className="fluid full" />
+          <img src="./img/menu_footer.svg" className="fluid full" />
 
           <h4 className="nav-menu-footer-title">Enlaces</h4>
           <p className="nav-menu-footer-content">
