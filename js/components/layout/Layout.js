@@ -1,3 +1,4 @@
+import Img from "../image/Img";
 import Navbar from "../navbar/Navbar";
 
 export default function Layout() {
@@ -13,9 +14,9 @@ export default function Layout() {
           exercitationem tempora.
         </p>
 
-        <img
+        <Img
           src="https://via.placeholder.com/600x300"
-          className="fluid full margin"
+          title="Ejemplo de una imagen grande"
         />
 
         <p>

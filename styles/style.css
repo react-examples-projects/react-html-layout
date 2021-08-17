@@ -110,6 +110,7 @@ img.margin {
   padding: 1.5rem;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .nav .nav-menu .nav-item .nav-icon {
@@ -120,4 +121,22 @@ img.margin {
 .nav .nav-menu .nav-item:hover {
   background-color: #082032;
   border-radius: 5px;
+}
+
+figure {
+  margin-bottom: 1rem;
+}
+
+figure > img {
+  margin-bottom: 0.5rem;
+}
+
+figure figcaption {
+  opacity: 0.7;
+}
+
+figure figcaption::before {
+  content: "—";
+  display: inline-block;
+  margin-right: 0.2rem;
 }
