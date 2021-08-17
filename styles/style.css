@@ -90,6 +90,25 @@ img.margin {
   grid-template-columns: minmax(220px, 1fr) 5fr;
 }
 
+.hamburger {
+  display: none;
+  padding: 5px !important;
+}
+
+.hamburger .hamburger-box {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+  width: 25px;
+  height: 2px;
+  background-color: #789 !important;
+}
+
 .content {
   padding: 3rem;
   position: relative;
@@ -125,8 +144,13 @@ img.margin {
 }
 
 .nav .nav-header {
-  padding: 3rem 1.5rem 0 2.6rem;
+  padding: 3rem 1.5rem 0 1.5rem;
   position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav .nav-header button.hamburger {
 }
 
 .nav .nav-header::after {
@@ -184,8 +208,17 @@ img.margin {
 }
 
 @media screen and (max-width: 760px) {
+  body {
+    font-size: 12px;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+
   .container {
     display: block;
+    margin-left: 3rem;
   }
 
   .nav {
@@ -195,7 +228,39 @@ img.margin {
     z-index: 9999;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 75px;
+    overflow-x: hidden;
     max-width: 250px;
+    transition: all 0.2s ease;
+  }
+
+  .nav.is-active {
+    width: 220px;
+  }
+
+  .nav:not(.is-active) .nav-menu .nav-menu-footer,
+  .nav:not(.is-active) .nav-menu .nav-item span {
+    display: none;
+  }
+
+  .nav:not(.is-active) .nav-menu .nav-item {
+    padding: 0.8rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .nav:not(.is-active) .nav-menu .nav-item .nav-icon {
+    margin-right: 0;
+  }
+
+  .nav:not(.is-active) .nav-header {
+    padding: 0.5rem;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  .nav:not(.is-active) .nav-header h3 {
+    display: none;
   }
 }

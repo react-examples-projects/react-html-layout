@@ -2,9 +2,27 @@ import NavbarItem from "./NavbarItem";
 
 export default function Navbar() {
   const [active, setActive] = React.useState(false);
+  const isOpen = active ? " is-active" : "";
+  const toggle = () => {
+    setActive(!active);
+  };
+
   return (
-    <nav role="navigation" aria-label="Menu de navegación" className="nav">
+    <nav
+      role="navigation"
+      aria-label="Menu de navegación"
+      className={`nav${isOpen}`}
+    >
       <header className="nav-header">
+        <button
+          onClick={toggle}
+          className={`hamburger hamburger--collapse${isOpen}`}
+          type="button"
+        >
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
+        </button>
         <h3>Menu prueba</h3>
       </header>
       <div className="nav-menu">
